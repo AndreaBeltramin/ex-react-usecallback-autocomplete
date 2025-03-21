@@ -27,11 +27,11 @@ function App() {
 			)
 				.then((res) => res.json())
 				.then((data) => {
-					console.log(data);
+					console.log("Api call");
 					return setQuery(data);
 				})
 				.catch((error) => console.error(error));
-		}, 300),
+		}, 1000),
 		[]
 	);
 
