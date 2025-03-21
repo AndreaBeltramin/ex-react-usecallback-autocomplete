@@ -1,0 +1,19 @@
+.container {
+	width: 177px;
+}
+ul {
+	background-color: darkgray;
+	margin-left: 0;
+	padding-left: 0;
+	border: solid black 1px;
+}
+
+li {
+	list-style: none;
+	border-bottom: solid black 1px;
+	margin-left: 0;
+	padding: 5px 5px;
+}
+li:last-child {
+	border-bottom: none;
+}

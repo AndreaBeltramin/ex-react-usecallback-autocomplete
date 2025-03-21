@@ -5,6 +5,10 @@ function App() {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState([]);
 	useEffect(() => {
+		if (!search.trim()) {
+			setQuery([]);
+			return;
+		}
 		fetch(
 			`https://boolean-spec-frontend.vercel.app/freetestapi/products?search=${search}`
 		)
@@ -21,18 +25,18 @@ function App() {
 			<h1>Ricerca il prodotto:</h1>
 			<input
 				type="text"
-				placeholder="Cerca il prodotto"
+				placeholder="Cerca un prodotto..."
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
 			/>
-			<div>
-				{query.map((product) => (
-					<div key={product.id}>
-						<h1>{product.name}</h1>
-						<p>{product.price}</p>
-						<p>{product.description}</p>
-					</div>
-				))}
+			<div className="container">
+				{query.length > 0 && (
+					<ul>
+						{query.map((product) => (
+							<li key={product.id}>{product.name}</li>
+						))}
+					</ul>
+				)}
 			</div>
 		</div>
 	);
