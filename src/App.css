@@ -1,16 +1,24 @@
 .container {
 	width: 177px;
 }
+.input {
+	border-radius: 5px;
+	border-color: darkgray;
+	padding: 5px;
+}
 ul {
-	background-color: darkgray;
+	background-color: lightgray;
 	margin-left: 0;
 	padding-left: 0;
-	border: solid black 1px;
+	border: solid darkgray 1px;
+	border-radius: 10px;
+	max-height: 300px;
+	overflow: scroll;
 }
 
 li {
 	list-style: none;
-	border-bottom: solid black 1px;
+	border-bottom: solid darkgray 1px;
 	margin-left: 0;
 	padding: 5px 5px;
 }
